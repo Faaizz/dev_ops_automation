@@ -13,7 +13,7 @@ and clean up installation files afterwards.
 
 ### Basic Usage
 ```shell
-sudo ./install_wordpress.py --target="/var/www/html" --mysql_root_pass="RootPass" --mysql_pass="MyPass"
+sudo ./src/install_wordpress.py --target="/var/www/html" --mysql_root_pass="RootPass" --mysql_pass="MyPass"
 ```
 
 ### Flags and Arguments
@@ -42,7 +42,7 @@ also be stored in the default location */etc/ssl/private*
 
 ### Basic Usage
 ```shell
-sudo ./apache2_conf_site.py --name="main_site"  --dir="/var/www/html" --server_name="example.com"
+sudo ./src/apache2_conf_site.py --name="main_site"  --dir="/var/www/html" --server_name="example.com"
 ```
 
 ### Flags and Arguments
