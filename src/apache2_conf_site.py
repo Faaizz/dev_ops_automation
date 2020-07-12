@@ -209,3 +209,8 @@ try:
     print(str(out) + "\n")
 except subprocess.TimeoutExpired:
     print("apache2.service restart command timed out...\n")
+
+
+#==============================================================================
+# CLEANUP
+misc_funcs.cleanup("../apache2")
