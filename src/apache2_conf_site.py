@@ -17,8 +17,7 @@ cl_parser= argparse.ArgumentParser(
 # Arguments
 # SSL mode
 cl_parser.add_argument(
-    "-s", action="store_true", default="admin",
-    help="Server admin"
+    "-s", action="store_true", help="SSL Option"
 )
 
 
