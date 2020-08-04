@@ -3,6 +3,12 @@ Simple scripts for automating common DevOps operations on Ubuntu
 (and other debian-based linux distributions).
 
 -------------------------------------------------------------------------------
+## Content
+- [Wordpress Automated Setup](#Wordpress-Automated-Setup)  
+- [Apache Automated Site Configuration](#Apache-Automated-Site-Configuration)  
+- [NGINX Automated Reverse Proxy for Web Apps](#NGINX-Automated-Reverse-Proxy-for-Web-Apps)  
+
+-------------------------------------------------------------------------------
 ## Wordpress Automated Setup
 Automatically download and extract the latest release of wordpress, 
 create MySQL database and user for use with wordpress, 
@@ -32,7 +38,7 @@ sudo ./src/install_wordpress.py --target="/var/www/html" --mysql_root_pass="Root
 - PHP
 
 -------------------------------------------------------------------------------
-## Apache Site Configuration
+## Apache Automated Site Configuration
 Automatically generate site config file, enable the site, 
 and restart apache2 service.  
 SSL support is also included. However, the certificate files must be 
@@ -64,3 +70,28 @@ chain file name. Certificate chain file must be stored in */etc/ssl/*
 - Run with root privileges (i.e. prefixed with *sudo*)
 - Pyhton3
 - Apache2 HTTP Server 
+
+
+-------------------------------------------------------------------------------
+## NGINX Automated Reverse Proxy for Web Apps
+Automatically set up reverse proxy for web apps and reload nginx service to effect changes.  
+
+### Basic Usage
+```shell
+sudo ./src/nginx_conf.py --name="main_site"  --from_site="127.0.0.1:5000" --server_name="example.com"
+```
+
+In the above example, all incoming traffic to *example.com* are routed to *127.0.0.1:5000*. 
+Similarly, all outgoing traffic from *127.0.0.1:5000* are routed through *example.com*.
+
+### Flags and Arguments
+- ```-h```: to view help
+- ```--name```: Optional. Defaults to *myssite*. 
+Site name, saves the configuration file as <name>
+- ```--from_site```: Optional. Defaults to *localhost:5000*. Server hostname
+- ```--server_name```: Optional. Defaults to *localhost*. Server hostname
+
+### Requirements
+- Run with root privileges (i.e. prefixed with *sudo*)
+- Pyhton3
+- Nginx Server
