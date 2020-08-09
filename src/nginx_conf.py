@@ -43,7 +43,7 @@ install_options= cl_parser.parse_args()
 #==============================================================================
 # CREATE TEMPORARY DIRECTOY AND SET AS WORKING DIRECTORY
 # Temporary directory location
-temp_path= "../temp/nginx"
+temp_path= "./temp/nginx"
 
 # Log
 print(

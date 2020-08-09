@@ -49,7 +49,7 @@ install_options= cl_parser.parse_args()
 # CREATE TEMP DIRECTORY
 
 # Temporary directory path
-temp_path= "../temp/wordpress"
+temp_path= "./temp/wordpress"
 
 # Create temporary directory
 misc_funcs.create_temp_dir(temp_path)
