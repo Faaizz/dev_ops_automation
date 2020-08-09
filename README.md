@@ -1,5 +1,5 @@
 # DevOps Automation
-Simple scripts for automating common DevOps operations on Ubuntu 
+Simple python scripts for automating common DevOps operations on Ubuntu 
 (and other debian-based linux distributions).
 
 -------------------------------------------------------------------------------
